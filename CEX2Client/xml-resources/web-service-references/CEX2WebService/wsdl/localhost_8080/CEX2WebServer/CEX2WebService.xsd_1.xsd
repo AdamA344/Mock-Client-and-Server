@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addNumberToServer" type="tns:addNumberToServer"/>
+
+<xs:element name="addNumberToServerResponse" type="tns:addNumberToServerResponse"/>
+
+<xs:element name="addSampleToServer" type="tns:addSampleToServer"/>
+
+<xs:element name="addSampleToServerResponse" type="tns:addSampleToServerResponse"/>
+
+<xs:element name="findAllSamplesWithHumidityAbove" type="tns:findAllSamplesWithHumidityAbove"/>
+
+<xs:element name="findAllSamplesWithHumidityAboveResponse" type="tns:findAllSamplesWithHumidityAboveResponse"/>
+
+<xs:element name="findSampleWithHighestHumity" type="tns:findSampleWithHighestHumity"/>
+
+<xs:element name="findSampleWithHighestHumityResponse" type="tns:findSampleWithHighestHumityResponse"/>
+
+<xs:element name="findSumOfNumberInServer" type="tns:findSumOfNumberInServer"/>
+
+<xs:element name="findSumOfNumberInServerResponse" type="tns:findSumOfNumberInServerResponse"/>
+
+<xs:element name="getLengthOfLongestString" type="tns:getLengthOfLongestString"/>
+
+<xs:element name="getLengthOfLongestStringResponse" type="tns:getLengthOfLongestStringResponse"/>
+
+<xs:element name="getLengthOfLongestStringWithException" type="tns:getLengthOfLongestStringWithException"/>
+
+<xs:element name="getLengthOfLongestStringWithExceptionResponse" type="tns:getLengthOfLongestStringWithExceptionResponse"/>
+
+<xs:element name="isConnected" type="tns:isConnected"/>
+
+<xs:element name="isConnectedResponse" type="tns:isConnectedResponse"/>
+
+<xs:complexType name="isConnected">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="isConnectedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNumberToServer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNumberToServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLengthOfLongestString">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLengthOfLongestStringResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSampleToServer">
+<xs:sequence>
+<xs:element name="arg0" type="tns:sample" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sample">
+<xs:sequence>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="humidity" type="xs:double" minOccurs="0"/>
+<xs:element name="temperature" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSampleToServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSampleWithHighestHumity">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findSampleWithHighestHumityResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sample" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLengthOfLongestStringWithException">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLengthOfLongestStringWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllSamplesWithHumidityAbove">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllSamplesWithHumidityAboveResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sample" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSumOfNumberInServer">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findSumOfNumberInServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
